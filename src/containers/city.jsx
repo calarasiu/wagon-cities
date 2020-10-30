@@ -1,32 +1,29 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { Component } from 'react';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { selectCity } from "../actions";
+import { selectCity } from "../actions/actions";
 
 
 class City extends Component {
-  handleClick = () => {
-    return selectCity(this.props.index);
+  handleClick=() => {
+    // debugger
+    this.props.selectCity(this.props.city);
   }
   render() {
     return (
-      <div className="list-group-item" onClick={this.handleClick}>
-        <p>{this.props.name}</p>
-      </div>
+      <li
+        className="list-group-item"
+        onClick={this.handleClick}
+      >{this.props.city.name}
+      </li>
     );
   }
-}
-
-function mapStateToProps(state) {
-  return {
-    city: state.city
-  };
 }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ selectCity }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(City);
+export default connect(null, mapDispatchToProps)(City);

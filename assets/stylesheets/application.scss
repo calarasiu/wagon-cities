@@ -1,27 +1,42 @@
+html{
+  height: fit-content;
+  margin:0%;
+  padding: 0%;
+  overflow: hidden;
+}
 body {
   color: white;
   background-color: black;
+  margin:0%;
+  padding: 0%;
+  height: 100vh;
 }
 
 .app {
   margin-top: 10px;
   margin-bottom: 10px;
   display: flex;
+  height: 100vh;
+  
   .cities {
     width: 30%;
+    overflow-y: scroll;
+    margin: 20px;
+    
   }
   .active-city {
     width: 70%;
-    margin-left: 20px;
+    margin: 20px;
     padding: 10px 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     text-align: center;
+    height: 90vh;
     h3 {
       margin-top: 0;
     }
     img{
-      width: 750px;
+      width: 600px;
       height:auto;
     }
   }
@@ -30,4 +45,5 @@ body {
 .list-group-item {
   background-color: transparent;
   cursor: pointer;
+  
 }

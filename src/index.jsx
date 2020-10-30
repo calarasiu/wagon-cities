@@ -10,11 +10,11 @@ import '../assets/stylesheets/application.scss';
 
 // reducers
 import citiesReducer from './reducers/cities_reducer';
-import cityReducer from './reducers/city_reducer';
+import ActiveCityReducer from './reducers/activeCity_reducer';
 // State and reducers
 const reducers = combineReducers({
   cities: citiesReducer,
-  city: cityReducer
+  activeCity: ActiveCityReducer
 });
 
 

@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CityList from '../containers/city_list';
 import ActiveCity from '../containers/active-city';
 
 
-class App extends Component {
+const App = () => {
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -13,14 +13,12 @@ class App extends Component {
   // select=(index) => {
   //   this.setState({ selected: cities[index] });
   // }
-  render() {
-    return (
-      <div className="app">
-        <CityList />
-        <ActiveCity />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="app">
+      <CityList />
+      <ActiveCity />
+    </div>
+  );
+};
 
 export default App;

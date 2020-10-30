@@ -10,7 +10,6 @@ export function setCities() {
 }
 
 export function selectCity(theCity) {
-  
   return {
     type: "SET_CITY",
     payload: theCity

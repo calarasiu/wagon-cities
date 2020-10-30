@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import City from './city';
 
-import { setCities } from '../actions';
+import { setCities } from '../actions/actions';
 
 
 class CityList extends Component {
@@ -12,7 +12,7 @@ class CityList extends Component {
   //   return this.props.select(index);
   // }
   componentWillMount() {
-    this.props.setFlats();
+    this.props.setCities();
   }
   render() {
     const {
@@ -21,7 +21,7 @@ class CityList extends Component {
     return (
       <div className="cities">
         {cities.map((city, index) => {
-          return <City name={city.name} index={index} selectCity={this.selectCity} key={city.index} />;
+          return <City city={city} key={index} />;
         })
         }
       </div>
